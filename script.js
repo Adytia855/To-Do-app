@@ -104,11 +104,8 @@ function renderTasks() {
 			duration: 0.9,
 			ease: "power2.out",
 		});
-
-		
-		
 	});
-}
+};
 
 // Jika tekan ENTER di input, tambah task
 inputBox.addEventListener("keyup", (event) => {
@@ -117,11 +114,5 @@ inputBox.addEventListener("keyup", (event) => {
 	}
 });
 
-
-function resetTasks() {
-	localStorage.removeItem("tasks");
-	tasks = [];
-	renderTasks();
-}
 
 
