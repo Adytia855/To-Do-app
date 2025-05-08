@@ -11,7 +11,7 @@ function addTask() {
 	console.log("Input value:", `"${inputBox.value}"`);
 	const taskText = inputBox.value.trim();
 	if (taskText === "") {
-		alert("Task tidak boleh kosong!");
+		alert("Task cannot be empty!");
 		return;
 	}
 	const task = {
