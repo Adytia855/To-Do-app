@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-600 min-h-screen flex items-center justify-center">
+  <main class="w-full max-w-xl p-12 bg-white rounded-xl">
+    <h1 class="text-2xl font-bold mb-8 ">To-Do List 📝</h1>
+    <section class="mb-3 flex">
+      <input type="text" id="input-box" class="flex-grow p-4 pl-7 rounded-full bg-gray-200">
+      <button id="input-button" onclick="addTask()"
+        class="-ml-20 px-8 py-2 bg-slate-500 text-white rounded-full hover:bg-slate-400 transition duration-300 ease-in-out">➕</button>
+    </section>
+    <section class="">
+      <ul id="list-container" class=""></ul>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
