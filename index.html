@@ -12,13 +12,17 @@
     <h1 class="text-2xl font-bold mb-8 ">To-Do List 📝</h1>
     <section class="mb-3 flex">
       <input type="text" id="input-box" class="flex-grow p-4 pl-7 rounded-full bg-gray-200">
-      <button id="input-button" onclick="addTask()"
+      <button id="input-button" 
         class="-ml-20 px-8 py-2 bg-slate-500 text-white rounded-full hover:bg-slate-400 transition duration-300 ease-in-out">➕</button>
     </section>
     <section class="">
       <ul id="list-container" class=""></ul>
     </section>
+    <button onclick="resetTasks()" class="bg-red-500 text-white px-4 py-2 rounded-full mt-4 hover:bg-red-600 transition">
+  Hapus Semua Task
+</button>
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

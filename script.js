@@ -1,13 +1,14 @@
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 const inputButton = document.getElementById("input-button");
-
+inputButton.addEventListener("click", addTask);
 // Ambil data dari localStorage saat halaman dibuka
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 renderTasks();
 
 // Tambah task saat tombol ditekan
 function addTask() {
+	console.log("Input value:", `"${inputBox.value}"`);
 	const taskText = inputBox.value.trim();
 	if (taskText === "") {
 		alert("Task tidak boleh kosong!");
@@ -23,6 +24,8 @@ function addTask() {
 	renderTasks();
 	inputBox.value = "";
 }
+
+
 
 // Simpan tasks ke localStorage
 function saveTasks() {
@@ -69,15 +72,24 @@ function renderTasks() {
 		deleteBtn.className =
 			"text-red-500 font-bold ml-2 hover:text-red-700 transition";
 		deleteBtn.onclick = () => {
-			tasks.splice(index, 1);
-			saveTasks();
-			renderTasks();
+			gsap.to(li, {
+				opacity: 0,
+				scale: 0.8,
+				duration: 0.6,
+				ease: "power1.in",
+				onComplete: () => {
+					// Setelah animasi selesai, hapus task dan render ulang
+					tasks.splice(index, 1);
+					saveTasks();
+					renderTasks();
+				},
+			});
 		};
 		btnWrapper.appendChild(deleteBtn);
-
+		
 		row.appendChild(btnWrapper);
 		li.appendChild(row);
-
+		
 		// Tampilkan waktu input
 		const timeLabel = document.createElement("small");
 		timeLabel.textContent = task.timestamp;
@@ -85,6 +97,16 @@ function renderTasks() {
 		li.appendChild(timeLabel);
 
 		listContainer.appendChild(li);
+
+		gsap.from(li, {
+			opacity: 0,
+			y: -20,
+			duration: 0.9,
+			ease: "power2.out",
+		});
+
+		
+		
 	});
 }
 
@@ -95,5 +117,11 @@ inputBox.addEventListener("keyup", (event) => {
 	}
 });
 
-// Klik tombol ➕
-inputButton.addEventListener("click", addTask);
+
+function resetTasks() {
+	localStorage.removeItem("tasks");
+	tasks = [];
+	renderTasks();
+}
+
+
