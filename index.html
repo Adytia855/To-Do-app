@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic HTML metadata -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To-Do List App</title>
+  <!-- Favicon for the browser tab -->
   <link rel="icon" type="image/png" sizes="32x32" href="https://img.icons8.com/ios-filled/32/000000/task.png">
+  <!-- Link to the external CSS file -->
   <link rel="stylesheet" href="style.css">
+  <!-- Tailwind CSS JIT CDN (for development/prototyping) -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="bg-gray-600 min-h-screen flex items-center justify-center">
+  <!-- Main content container for the to-do list application -->
   <main class="w-full max-w-xl p-12 bg-white rounded-xl">
+    <!-- Application Title -->
     <h1 class="text-2xl font-bold mb-8 ">To-Do List 📝</h1>
+    <!-- Section for adding new tasks -->
     <section class="mb-3 flex">
+      <!-- Input field for new task text -->
       <input type="text" id="input-box" class="flex-grow p-4 pl-7 rounded-full bg-gray-200">
+      <!-- Button to add the new task -->
       <button id="input-button" 
         class="-ml-20 px-8 py-2 bg-slate-500 text-white rounded-full hover:bg-slate-400 transition duration-300 ease-in-out">➕</button>
     </section>
+    <!-- Section to display the list of tasks -->
     <section class="">
+      <!-- Unordered list where tasks will be rendered by JavaScript -->
       <ul id="list-container" class=""></ul>
     </section>
   </main>
+  <!-- Footer section -->
   <footer class="fixed bottom-0 left-0 w-full bg-neutral-900 bg-opacity-80 text-center py-2 text-sm text-gray-400 z-50">
 		<span>❤️</span><span class="glow-text"> Made with love by</span> <span class="font-semibold text-white">Adytia</span>
 	</footer>
+  <!-- GSAP animation library -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <!-- Link to the external JavaScript file for application logic -->
   <script src="script.js"></script>
 </body>
 </html>
