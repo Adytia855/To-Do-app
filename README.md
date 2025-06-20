@@ -1,6 +1,10 @@
 # 📝 To-Do App
 
-&#x20; &#x20;
+![GitHub top language](https://img.shields.io/github/languages/top/Adytia855/To-Do-app?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/Adytia855/To-Do-app?style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/Adytia855/To-Do-app?style=flat-square)
+![GitHub](https://img.shields.io/github/license/Adytia855/To-Do-app?style=flat-square)
+
 
 A browser-based To-Do List manager that helps you stay productive. Built with **HTML**, **Tailwind CSS**, and **JavaScript**, and enhanced with **GSAP animations**.
 
@@ -23,7 +27,7 @@ A browser-based To-Do List manager that helps you stay productive. Built with **
 
 ---
 
-## 📁 Folder Structure (Mermaid)
+## 📁 Folder Structure 
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#0f172a', 'edgeLabelBackground':'#f8fafc'}}}%%
@@ -135,11 +139,6 @@ git clone https://github.com/Adytia855/To-Do-app.git
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
 
 ## 🙋‍♂️ Author
 
